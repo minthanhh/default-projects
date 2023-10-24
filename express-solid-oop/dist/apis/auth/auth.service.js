@@ -1,0 +1,2 @@
+"use strict";function _define_property(){let e=require("@swc/helpers/_/_define_property");return _define_property=function(){return e},e}Object.defineProperty(exports,"__esModule",{value:!0}),Object.defineProperty(exports,"AuthService",{enumerable:!0,get:function(){return AuthService}});class AuthService{login(){this.authRepository.login()}constructor(e){_define_property()._(this,"authRepository",void 0),this.authRepository=e}}
+//# sourceMappingURL=auth.service.js.map

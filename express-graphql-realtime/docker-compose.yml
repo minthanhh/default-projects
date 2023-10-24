@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  postgres-database:
+    image: postgres
+    container_name: postgres-database
+    volumes:
+      - data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_USER=user
+      - POSTGRES_DB=graphql-db
+      - POSTGRES_HOST=postgres-database
+      - POSTGRES_PORT=5432
+    ports:
+      - 5432:5432
+  social-server:
+    # image: node:alpine
+    build: ./
+    container_name: social-server
+    ports:
+      - 4080:4080
+    volumes:
+      - ../express-graphql-realtime:/usr/src/social-server-app
+      - /usr/src/social-server-app/node_modules
+    env_file:
+      - ./.env
+    depends_on:
+      - postgres-database
+volumes:
+  data:

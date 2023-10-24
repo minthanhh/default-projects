@@ -1,0 +1,10 @@
+overwrite: true
+schema: 'src/apps/resolvers/schema.graphql'
+generates:
+    src/apps/generated/schemas.ts:
+        plugins:
+            - 'typescript'
+            - 'typescript-resolvers'
+        config:
+            useIndexSignature: true
+            withMutationOptionsType: true

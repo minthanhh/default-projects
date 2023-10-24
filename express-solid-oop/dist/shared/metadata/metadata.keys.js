@@ -1,0 +1,2 @@
+"use strict";var MetadataKeys,MetadataKeys;Object.defineProperty(exports,"__esModule",{value:!0}),Object.defineProperty(exports,"MetadataKeys",{enumerable:!0,get:function(){return MetadataKeys}}),(MetadataKeys=MetadataKeys||(MetadataKeys={})).BASE_PATH="base_path",MetadataKeys.ROUTERS="router";
+//# sourceMappingURL=metadata.keys.js.map

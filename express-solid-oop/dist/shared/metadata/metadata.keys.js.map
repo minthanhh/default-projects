@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/shared/metadata/metadata.keys.ts"],"sourcesContent":["export enum MetadataKeys {\r\n   BASE_PATH = 'base_path',\r\n   ROUTERS = 'router',\r\n}\r\n"],"names":["MetadataKeys"],"mappings":"8BAAYA,uKAAAA,aAAAA,eAAAA"}

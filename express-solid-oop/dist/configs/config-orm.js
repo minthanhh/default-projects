@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),Object.defineProperty(exports,"ConfigurationTypeORM",{enumerable:!0,get:function(){return ConfigurationTypeORM}});const ConfigurationTypeORM={};
+//# sourceMappingURL=config-orm.js.map

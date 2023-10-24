@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),Object.defineProperty(exports,"default",{enumerable:!0,get:function(){return _default}}),require("dotenv/config");const AppSettings={PORT:process.env.APP_PRIVATE_PORT},_default=AppSettings;
+//# sourceMappingURL=app-setting.js.map

@@ -1,0 +1,64 @@
+interface MutationRespone {
+    message: String!
+    success: Boolean!
+    code: Int!
+}
+
+type RegisterRespone implements MutationRespone {
+    message: String!
+    success: Boolean!
+    code: Int!
+    user: User
+}
+
+type LoginRespone implements MutationRespone {
+    message: String!
+    success: Boolean!
+    code: Int!
+    user: User!
+}
+
+type User {
+    id: Int
+    username: String!
+    email: String!
+    password: String!
+    accessToken: String
+    messages: [Message]
+}
+
+input RegisterDto {
+    username: String!
+    email: String!
+    password: String!
+}
+
+input LoginDto {
+    username: String!
+    password: String!
+}
+
+type Message {
+    id: Int
+    content: String!
+    receiverId: Int!
+    senderId: Int!
+}
+
+type Query {
+    getUser: User!
+    messageByUser(receiverId: Int!): [Message]
+}
+
+type Mutation {
+    # Authentication
+    register(registerDto: RegisterDto!): RegisterRespone
+    login(loginDto: LoginDto!): LoginRespone
+
+    # Chat
+    sendMessage(receiverId: Int!, content: String!): Message!
+}
+
+type Subscription {
+    newMessage: Message!
+}
